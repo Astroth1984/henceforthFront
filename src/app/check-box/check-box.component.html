@@ -1,0 +1,55 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<style>
+
+  
+
+.tp-h2 {
+    margin: 10px;
+ }
+ .tp-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+ }
+ .tp-margin {
+    margin: 0 10px;
+ }
+</style>
+
+
+<div style="padding: 50px; width:400px;">
+ 
+  <mat-card>
+ 
+    <mat-card-title>Les Methodes de Traitement dans un fichier CSV</mat-card-title>
+ 
+    <mat-card-content>
+ 
+      <mat-list>
+ 
+        <mat-list-item>
+          <mat-checkbox
+          [(ngModel)]="master_checked"
+          [(indeterminate)]="master_indeterminate"
+          (change)="master_change()"
+          ><b>Check/ Uncheck All</b></mat-checkbox>
+        </mat-list-item>
+ 
+        <mat-list-item *ngFor="let item of checkbox_list">
+          <mat-checkbox
+          [(ngModel)]="item.checked"
+          [disabled]="item.disabled"
+          [labelPosition]="item.labelPosition"
+          (change)="list_change()"
+          >{{ item.name }}</mat-checkbox>
+        </mat-list-item>
+ 
+      </mat-list>
+ 
+    </mat-card-content>
+  </mat-card>
+</div>  

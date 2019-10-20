@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'henceforthfront';
+  title = 'henceforth';
+  description = 'Upload your CSV File to start Cleaning'
 }
